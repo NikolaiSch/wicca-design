@@ -2,6 +2,7 @@ const config = {
     content: ['./src/**/*.{html,js,svelte,ts}'],
 
     theme: {
+        mode: 'jit',
         extend: {
             colors: {
                 "primary-dark": "#8C8884",

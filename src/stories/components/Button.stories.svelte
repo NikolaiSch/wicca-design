@@ -42,7 +42,9 @@
 
 <!-- More on component templates: https://storybook.js.org/docs/svelte/writing-stories/introduction#using-args -->
 <Template let:args>
-	<Button {...args} on:click={args.onClick} />
+	<Button {...args} on:click={args.onClick}>
+		{args.label}
+	</Button>
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
