@@ -15,17 +15,36 @@
 		cl.setTheme('dark');
 	}
 
+	cl.appendToBoth([
+		'hover:text-gray-700',
+		'hover:delay-75',
+		'hover:text-primary-light',
+		'hover:-translate-y-1',
+		'hover:translate-z-1',
+		'hover:bg-opacity-70',
+		'hover:shadow-lg',
+		'hover:shadow-accent-ocean/40',
+		'active:translate-y-1',
+		'active:shadow-none',
+		'delay-150',
+		'transition-all'
+	]);
+
 	if (primary === true) {
-		cl.appendToBoth(['hover:scale-110', 'transition-all', 'bg-accent-ocean', 'text-primary-light']);
+		cl.appendToBoth([
+			'bg-accent-ocean',
+			'text-primary-light',
+			'hover:text-gray-900',
+			'hover:scale-110'
+		]);
 	} else if (primary === false) {
 		cl.appendToBoth([
-			'hover:scale-105',
-			'transition-all',
 			'border-accent-ocean',
 			'border-2',
-			'text-primary-light',
-			'hover:bg-accent-ocean',
-			'hover:bg-opacity-50'
+			'bg-opacity-30',
+			'bg-accent-ocean',
+			'text-primary-dark',
+			'hover:scale-105'
 		]);
 	}
 	/**
@@ -34,11 +53,11 @@
 	export let size = 'medium';
 
 	if (size == 'small') {
-		cl.appendToBoth(['px-3', 'py-2', 'rounded-xl']);
+		cl.appendToBoth(['px-3', 'py-2', 'rounded-3xl', 'text-md']);
 	} else if (size == 'medium') {
-		cl.appendToBoth(['px-4', 'py-3', 'rounded-2xl']);
+		cl.appendToBoth(['px-4', 'py-3', 'rounded-3xl', 'text-lg']);
 	} else if (size == 'large') {
-		cl.appendToBoth(['px-6', 'py-3', 'rounded-3xl']);
+		cl.appendToBoth(['px-6', 'py-3', 'rounded-3xl', 'text-xl']);
 	}
 	/**
 	 * Button contents
@@ -54,6 +73,7 @@
 	function onClick(event) {
 		dispatch('click', event);
 	}
+
 	let classes = cl.toString();
 	$: classes = cl.toString();
 </script>
