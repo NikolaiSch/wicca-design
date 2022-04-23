@@ -6,23 +6,23 @@
 <!-- More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export -->
 <!-- More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes -->
 <Meta
-	title="Components/Button"
+	title="Components/Button/Sizes"
 	component={Button}
 	argTypes={{
-		primary: {
-			control: 'boolean',
+		color: {
+			control: { type: 'select' },
+			options: ['primary', 'secondary', 'tertiary', 'danger'],
 			description:
-				'This defines if this will be used as a key button, in order to draw attention to',
-			defaultValue: true,
-			name: 'Primary',
-			type: 'boolean'
+				'This defines if this will be used as a key button, in order to draw attention to, or another color way',
+			defaultValue: 'primary',
+			name: 'Colorway'
 		},
-		darkMode: {
-			control: 'boolean',
-			description:
-				'This defines if this will be used as on a dark mode display, or when toggled by user to dark mode',
-			defaultValue: false,
-			name: 'Dark Mode'
+		style: {
+			control: { type: 'select' },
+			options: ['normal', 'ghost', 'extra-rounded'],
+			description: 'This defines how the button will look in shape',
+			defaultValue: 'normal',
+			name: 'Style'
 		},
 		label: {
 			control: 'text',
@@ -48,14 +48,6 @@
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
-<Story name="Primary" />
-
-<Story
-	name="Secondary"
-	args={{
-		primary: false
-	}}
-/>
 
 <Story
 	name="Small"
@@ -65,15 +57,15 @@
 />
 
 <Story
-	name="Large"
+	name="Medium"
 	args={{
-		size: 'large'
+		size: 'medium'
 	}}
 />
 
 <Story
-	name="Dark Mode"
+	name="Large"
 	args={{
-		darkMode: true
+		size: 'large'
 	}}
 />
