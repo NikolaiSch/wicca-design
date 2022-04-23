@@ -1,57 +1,102 @@
 <script>
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
-	import Checkbox from './Checkbox.svelte';
+	import Textbox from './Textbox.svelte';
 </script>
 
 <!-- More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export -->
 <!-- More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes -->
 <Meta
-	title="Components/Checkbox"
-	component={Checkbox}
+	title="Components/Textbox"
+	component={Textbox}
 	argTypes={{
-		disabled: {
-			control: 'boolean',
-			description: 'This is a variable that disabled the checkbox',
-			defaultValue: false,
-			name: 'Disabled'
+		type: {
+			control: { type: 'select' },
+			options: ['text', 'password', 'number', 'search'],
+			defaultValue: 'text',
+			name: 'Textbox Type'
 		},
-		color: {
-			control: { type: 'color' },
-			description: 'This shows the Selected color when it is checked',
-			defaultValue: '#57849e',
-			name: 'Color'
+		error: {
+			control: 'boolean',
+			description: 'This is a variable that displays a state of error',
+			defaultValue: false,
+			name: 'Error'
 		},
 		label: {
 			control: 'text',
-			description: 'This is used to change the text inside the Label',
-			defaultValue: 'Text',
+			description: 'This is used to change the text inside the textbox',
+			defaultValue: 'this is a textbox',
 			name: 'Label Text'
 		},
-		size: {
-			control: { type: 'range', min: 1, max: 50, step: 1 },
-			description: 'This is to change the checkbox size in pixels',
-			defaultValue: 20,
-			name: 'Size'
+		errorMessage: {
+			control: 'text',
+			description: 'This is used to change the text inside the error message',
+			defaultValue: 'Wrong Email',
+			name: 'Error Message'
 		},
-		debug: {
+		xpad: {
+			control: { type: 'range', min: 0, max: 50, step: 2 },
+			description: 'This is to change the textbox x padding',
+			defaultValue: 20,
+			name: 'X Padding'
+		},
+		ypad: {
+			control: { type: 'range', min: 0, max: 30, step: 2 },
+			description: 'This is to change the textbox y padding',
+			defaultValue: 10,
+			name: 'Y Padding'
+		},
+		disabled: {
 			control: 'boolean',
+			description: 'This is a variable that disabled the textbox',
 			defaultValue: false,
-			name: 'Debug Mode'
+			name: 'Disabled'
+		},
+		width: {
+			control: { type: 'range', min: 0, max: 600, step: 20 },
+			description: 'This is to change the textbox width',
+			defaultValue: 200,
+			name: 'Width'
 		}
 	}}
 />
 
 <!-- More on component templates: https://storybook.js.org/docs/svelte/writing-stories/introduction#using-args -->
 <Template let:args>
-	<Checkbox
-		--color={args.color}
-		--size={args.size + 'px'}
-		debug={args.debug}
+	<Textbox
+		text={args.label}
+		error={args.error}
 		disabled={args.disabled}
-	>
-		{args.label}
-	</Checkbox>
+		errorMessage={args.errorMessage}
+		type={args.type}
+		--x-pad={args.xpad.toString() + 'px'}
+		--y-pad={args.ypad.toString() + 'px'}
+		--width={args.width.toString() + 'px'}
+	/>
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
-<Story name="Checkbox" />
+<Story name="Text" />
+
+<Story
+	name="Password"
+	args={{
+		type: 'password',
+		label: 'this is a password box'
+	}}
+/>
+
+<Story
+	name="Number"
+	args={{
+		type: 'number',
+		label: 'this is a number box'
+	}}
+/>
+
+<Story
+	name="Search"
+	args={{
+		type: 'search',
+		label: 'this is a search box'
+	}}
+/>
