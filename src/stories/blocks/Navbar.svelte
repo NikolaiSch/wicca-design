@@ -4,15 +4,17 @@
 	import Logo from '../components/Logo.svelte';
 
 	export let size = 'medium';
+	export let height = '60px';
+	export let logoColor = '#000000';
 	export let button1style = 'normal';
 	export let button2style = 'ghost';
 	export let button1color = 'primary';
 	export let button2color = 'secondary';
 </script>
 
-<div class="flex flex-row bg-white px-4 py-2 justify-between">
-	<div class="pl-4">
-		<Logo />
+<div class="flex flex-row bg-white px-8 py-4 justify-between rounded-xl">
+	<div class="pl-4 my-auto">
+		<Logo --color={logoColor} --height={height} />
 	</div>
 	<div class="my-auto">
 		<Button {size} style={button1style} color={button1color}>Sign Up</Button>

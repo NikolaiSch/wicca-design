@@ -8,4 +8,5 @@ module.exports = {
     svelteOptions: {
         preprocess: import ('../svelte.config.js').preprocess,
     },
+    staticDirs: ['../static']
 }

@@ -45,6 +45,16 @@
 			description: 'This defines how the button will look in shape',
 			defaultValue: 'normal',
 			name: 'Style For Login'
+		},
+		color: {
+			name: 'Logo Color',
+			control: 'color',
+			defaultValue: '#000000'
+		},
+		logoHeight: {
+			name: 'Height',
+			control: { type: 'range', min: 0, max: 100, step: 5 },
+			defaultValue: 50
 		}
 	}}
 />
@@ -57,6 +67,8 @@
 		button2color={args.color2}
 		button1style={args.style1}
 		button2style={args.style2}
+		logoColor={args.color}
+		height={args.logoHeight + 'px'}
 	/>
 </Template>
 
@@ -64,19 +76,22 @@
 <Story
 	name="Small"
 	args={{
-		size: 'small'
+		size: 'small',
+		logoHeight: 40
 	}}
 />
 
 <Story
 	name="Medium"
 	args={{
-		size: 'medium'
+		size: 'medium',
+		logoHeight: 45
 	}}
 />
 <Story
 	name="Large"
 	args={{
-		size: 'large'
+		size: 'large',
+		logoHeight: 50
 	}}
 />

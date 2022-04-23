@@ -94,9 +94,8 @@
 	const dispatch = createEventDispatcher();
 
 	/**
-	 * Optional click handler
+	 * @param {any} event
 	 */
-	// @ts-ignore
 	function onClick(event) {
 		dispatch('click', event);
 	}
