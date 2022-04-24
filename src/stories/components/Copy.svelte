@@ -8,7 +8,7 @@
 	<h2 class="text-xl mr-12 text-white px-2 pt-[0.1em]">{text}</h2>
 	<button
 		type="button"
-		class="bg-accent-ocean w-8 h-8 transition-all scale-100 hover:scale-[1.45]"
+		class="bg-accent-ocean w-8 h-8 transition-all scale-100 hover:scale-[1.45] active:scale-125"
 		on:click={async () => {
 			await navigator.clipboard.writeText(text);
 			copied = true;

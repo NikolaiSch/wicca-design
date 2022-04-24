@@ -4,23 +4,55 @@
 	export let errorMessage = 'Not a valid email';
 	export let disabled = false;
 	export let error = false;
+	export let value = '';
 	const id = 'textbox';
 </script>
 
 <main>
-	{#if error}
-		<div class="flex flex-col bg-red-500/10 rounded-lg border-red-500 border">
-			<label for={id} class="px-2 py-1 text-lg">Error: {errorMessage}</label>
+	{#if type == 'text'}
+		{#if error}
+			<div class="flex flex-col bg-red-500/10 rounded-lg border-red-500 border">
+				<label for={id} class="px-2 py-1 text-lg">Error: {errorMessage}</label>
+				<input
+					type="text"
+					{id}
+					{disabled}
+					placeholder={text}
+					class="appearance-none border-2 rounded-lg bg-red-500/80 border-red-500"
+					bind:value
+				/>
+			</div>
+		{:else}
 			<input
 				{id}
-				{type}
 				{disabled}
 				placeholder={text}
-				class="appearance-none border-2 rounded-lg bg-red-500/80 border-red-500"
+				class="appearance-none border-2 rounded-lg"
+				bind:value
 			/>
-		</div>
-	{:else}
-		<input {id} {type} {disabled} placeholder={text} class="appearance-none border-2 rounded-lg" />
+		{/if}
+	{:else if type == 'password'}
+		{#if error}
+			<div class="flex flex-col bg-red-500/10 rounded-lg border-red-500 border">
+				<label for={id} class="px-2 py-1 text-lg">Error: {errorMessage}</label>
+				<input
+					type="password"
+					{id}
+					{disabled}
+					placeholder={text}
+					class="appearance-none border-2 rounded-lg bg-red-500/80 border-red-500"
+					bind:value
+				/>
+			</div>
+		{:else}
+			<input
+				{id}
+				{disabled}
+				placeholder={text}
+				class="appearance-none border-2 rounded-lg"
+				bind:value
+			/>
+		{/if}
 	{/if}
 </main>
 
