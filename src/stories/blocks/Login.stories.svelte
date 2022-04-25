@@ -23,4 +23,4 @@
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
-<Story name="Login" />
+<Story name="Login" id="primary" />

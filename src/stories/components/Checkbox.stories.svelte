@@ -54,4 +54,4 @@
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
-<Story name="Checkbox" />
+<Story name="Checkbox" id="checkb" />

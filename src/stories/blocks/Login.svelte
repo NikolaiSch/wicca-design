@@ -24,7 +24,7 @@
 	}
 </script>
 
-<main class="inline-flex flex-col bg-slate-300 px-16 py-10 rounded-lg">
+<main class="inline-flex flex-col bg-slate-300 px-16 py-10 rounded-lg" id="LoginBox">
 	<h1 class="text-2xl text-gray-700 pb-4">Login to your account</h1>
 	<div class="py-4">
 		<Textbox
