@@ -6,8 +6,8 @@
 	export let size = 'medium';
 	export let height = '60px';
 	export let logoColor = '#000000';
-	export let button1style = 'normal';
-	export let button2style = 'ghost';
+	export let button1style = 'box';
+	export let button2style = 'box';
 	export let button1color = 'primary';
 	export let button2color = 'secondary';
 </script>

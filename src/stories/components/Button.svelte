@@ -7,7 +7,7 @@
 
 	export let color = 'primary';
 	export let size = 'medium';
-	export let style = 'normal';
+	export let style = 'box';
 
 	cl.appendToBoth([
 		'hover:delay-75',
@@ -21,7 +21,7 @@
 		'mx-1'
 	]);
 
-	if (style === 'normal') {
+	if (style === 'rounded') {
 		cl.appendToBoth(['hover:scale-110']);
 		if (size == 'small') {
 			cl.appendToBoth(['px-3', 'py-2', 'rounded-3xl', 'text-md']);
