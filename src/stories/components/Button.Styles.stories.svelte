@@ -19,9 +19,9 @@
 		},
 		style: {
 			control: { type: 'select' },
-			options: ['normal', 'ghost', 'extra-rounded', 'box'],
+			options: ['rounded', 'ghost', 'extra-rounded', 'box'],
 			description: 'This defines how the button will look in shape',
-			defaultValue: 'normal',
+			defaultValue: 'box',
 			name: 'Style'
 		},
 		label: {
@@ -48,7 +48,7 @@
 </Template>
 
 <!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
-<Story name="Normal" />
+<Story name="Rounded"  />
 
 <Story
 	name="Ghost"
