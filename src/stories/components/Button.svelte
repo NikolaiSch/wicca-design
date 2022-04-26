@@ -54,6 +54,15 @@
 		} else if (size == 'large') {
 			cl.appendToBoth(['px-6', 'py-3', 'rounded-full', 'text-xl']);
 		}
+	} else if (style === 'box') {
+		cl.appendToBoth(['text-primary-light', 'hover:scale-110']);
+		if (size == 'small') {
+			cl.appendToBoth(['px-3', 'py-1', 'rounded-sm', 'text-md']);
+		} else if (size == 'medium') {
+			cl.appendToBoth(['px-4', 'py-1', 'rounded-sm', 'text-lg']);
+		} else if (size == 'large') {
+			cl.appendToBoth(['px-6', 'py-1', 'rounded-sm', 'text-xl']);
+		}
 	}
 
 	if (color === 'primary') {
