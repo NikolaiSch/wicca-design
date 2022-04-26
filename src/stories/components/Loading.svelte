@@ -10,7 +10,7 @@
 		--color: blue;
 		--width: 50;
 		--size: calc(var(--width) * 4 + 1);
-		--length: 4s;
+		--length: 2s;
 	}
 	@keyframes ping {
 		from {
