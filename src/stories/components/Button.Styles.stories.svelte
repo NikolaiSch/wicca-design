@@ -63,3 +63,5 @@
 		style: 'extra-rounded'
 	}}
 />
+
+<Story name="Box" args={{ style: 'box'}}/>
