@@ -22,7 +22,7 @@
 		length: {
 			name: 'Length of animation (seconds)',
 			control: { type: 'range', min: 0, max: 20, step: 1 },
-			defaultValue: 5
+			defaultValue: 2
 		}
 	}}
 />
