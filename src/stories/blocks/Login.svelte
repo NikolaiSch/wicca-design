@@ -4,7 +4,7 @@
 
 	import Textbox from '../components/formInput/Textbox.svelte';
 	import Checkbox from '../components/formInput/Checkbox.svelte';
-	import Button from '../components/buttons/Button.svelte';
+	import Button from '../components/Buttons/Button.svelte';
 
 	const dispatch = createEventDispatcher();
 
