@@ -1,9 +1,7 @@
 <script>
 </script>
 
-<svg>
-	<circle cx="50%" cy="50%" fill="inherit" class="fill-transparent stroke-[10]" />
-</svg>
+<svg> <circle cx="50%" cy="50%" fill="inherit" class="fill-transparent stroke-[10]" /> </svg>
 
 <style>
 	:root {
