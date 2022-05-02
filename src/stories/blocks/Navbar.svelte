@@ -2,7 +2,7 @@
 	// @ts-nocheck
 
 	import '../css/app.css';
-	import Button from '../buttons/Button.svelte';
+	import Button from '../components/buttons/Button.svelte';
 	import Logo from '../components/utils/Logo.svelte';
 
 	export let size = 'medium';

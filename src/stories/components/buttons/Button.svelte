@@ -1,6 +1,6 @@
 <script>
 	import '../../css/app.css';
-	import CL from '../svelte/ClassList';
+	import CL from '../../svelte/ClassList';
 	import { createEventDispatcher } from 'svelte';
 
 	const cl = new CL();
