@@ -20,7 +20,7 @@
 		},
 		style: {
 			control: { type: 'select' },
-			options: ['box', 'rounded', 'ghost', 'extra-rounded'],
+			options: ['box', 'ghost', 'rounded', 'extra-rounded', 'rounded-ghost'],
 			description: 'This defines how the button will look in shape',
 			defaultValue: 'box',
 			name: 'Style'
