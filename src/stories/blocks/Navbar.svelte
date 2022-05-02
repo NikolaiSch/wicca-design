@@ -1,7 +1,7 @@
 <script>
 	import '../css/app.css';
-	import Button from '../components/Button.svelte';
-	import Logo from '../components/Logo.svelte';
+	import Button from '../components/Buttons/Button.svelte';
+	import Logo from '../components/Utils/Logo.svelte';
 
 	export let size = 'medium';
 	export let height = '60px';

@@ -1,5 +1,5 @@
 <script>
-	import '../css/app.css';
+	import '../../css/app.css';
 	export let text = '';
 	let copied = false;
 </script>

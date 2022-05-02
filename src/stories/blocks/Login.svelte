@@ -2,9 +2,9 @@
 	import '../css/app.css';
 	import { createEventDispatcher } from 'svelte';
 
-	import Textbox from '../components/Textbox.svelte';
-	import Checkbox from '../components/Checkbox.svelte';
-	import Button from '../components/Button.svelte';
+	import Textbox from '../components/FormInputs/Textbox.svelte';
+	import Checkbox from '../components/FormInputs/Checkbox.svelte';
+	import Button from '../components/Buttons/Button.svelte';
 
 	const dispatch = createEventDispatcher();
 

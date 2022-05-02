@@ -1,12 +1,13 @@
 <script>
-	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
+	import { Meta, Template } from '@storybook/addon-svelte-csf';
 	import Button from './Button.svelte';
+	export let title = 'Button';
 </script>
 
 <!-- More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export -->
 <!-- More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes -->
 <Meta
-	title="Components/Button/Colors"
+	title="Components/Button/{title}"
 	component={Button}
 	argTypes={{
 		color: {
@@ -19,9 +20,9 @@
 		},
 		style: {
 			control: { type: 'select' },
-			options: ['normal', 'ghost', 'extra-rounded', 'box'],
+			options: ['box', 'rounded', 'ghost', 'extra-rounded'],
 			description: 'This defines how the button will look in shape',
-			defaultValue: 'normal',
+			defaultValue: 'box',
 			name: 'Style'
 		},
 		label: {
@@ -46,27 +47,3 @@
 		{args.label}
 	</Button>
 </Template>
-
-<!-- More on args: https://storybook.js.org/docs/svelte/writing-stories/args -->
-<Story name="Primary" />
-
-<Story
-	name="Secondary"
-	args={{
-		color: 'secondary'
-	}}
-/>
-
-<Story
-	name="Tertiary"
-	args={{
-		color: 'tertiary'
-	}}
-/>
-
-<Story
-	name="Danger"
-	args={{
-		color: 'danger'
-	}}
-/>

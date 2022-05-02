@@ -1,5 +1,5 @@
 <script>
-	export let checked = false;
+	export let checked = true;
 	export let id = 'button';
 	export let showText = true;
 	export let disabled = false;
@@ -23,13 +23,12 @@
 				bind:checked
 				{disabled}
 				class="appearance-none border border-gray-300 rounded-md bg-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+				content="Y"
 			/>
 		{/if}
 
 		{#if showText}
-			<label for={id} class="form-check-label inline-block text-gray-800 text-lg my-auto"
-				><slot /></label
-			>
+			<label for={id} class="form-check-label inline-block text-gray-800"><slot /></label>
 		{/if}
 	</div>
 	{#if debug}
@@ -45,5 +44,18 @@
 	input {
 		width: var(--size);
 		height: var(--size);
+	}
+
+	label {
+		font-size: calc(var(--size) * 0.8);
+	}
+
+	input:checked::after {
+		position: relative;
+		content: '✓';
+		color: white;
+		font-size: calc(var(--size) * 1.1);
+		bottom: calc(var(--size) * 0.35);
+		left: calc(var(--size) * 0.16);
 	}
 </style>

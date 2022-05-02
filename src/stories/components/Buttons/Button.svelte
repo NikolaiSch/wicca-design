@@ -1,6 +1,6 @@
 <script>
-	import '../css/app.css';
-	import CL from '../svelte/ClassList';
+	import '../../css/app.css';
+	import CL from '../../svelte/ClassList';
 	import { createEventDispatcher } from 'svelte';
 
 	const cl = new CL();
@@ -18,6 +18,7 @@
 		'delay-150',
 		'transition-all',
 		'font-bold',
+		'uppercase',
 		'mx-1'
 	]);
 
@@ -30,7 +31,7 @@
 		} else if (size == 'large') {
 			cl.appendToBoth(['px-6', 'py-3', 'rounded-3xl', 'text-xl']);
 		}
-	} else if (style === 'ghost') {
+	} else if (style === 'rounded-ghost') {
 		cl.appendToBoth([
 			'border-2',
 			'bg-opacity-30',
@@ -56,6 +57,21 @@
 		}
 	} else if (style === 'box') {
 		cl.appendToBoth(['text-primary-light', 'hover:scale-110']);
+		if (size == 'small') {
+			cl.appendToBoth(['px-3', 'py-1', 'rounded-sm', 'text-md']);
+		} else if (size == 'medium') {
+			cl.appendToBoth(['px-4', 'py-1', 'rounded-sm', 'text-lg']);
+		} else if (size == 'large') {
+			cl.appendToBoth(['px-6', 'py-1', 'rounded-sm', 'text-xl']);
+		}
+	} else if (style === 'ghost') {
+		cl.appendToBoth([
+			'border-2',
+			'bg-opacity-30',
+			'hover:scale-105',
+			'hover:bg-opacity-80',
+			'text-gray-800'
+		]);
 		if (size == 'small') {
 			cl.appendToBoth(['px-3', 'py-1', 'rounded-sm', 'text-md']);
 		} else if (size == 'medium') {

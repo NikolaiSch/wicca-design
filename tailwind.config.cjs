@@ -9,7 +9,7 @@ const config = {
                 "primary-light": "#EDEFDA",
                 "accent-ocean": "#00989A",
                 "accent-sea": "#2AB59D",
-                "accent-glass": "#99CAC8"
+                "accent-glass": "#99CAC8",
             }
         }
     },

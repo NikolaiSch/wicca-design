@@ -26,9 +26,9 @@
 		},
 		style1: {
 			control: { type: 'select' },
-			options: ['box', 'ghost', 'extra-rounded', 'rounded'],
+			options: ['box', 'ghost', 'extra-rounded', 'rounded', 'rounded-ghost'],
 			description: 'This defines how the button will look in shape',
-			defaultValue: 'normal',
+			defaultValue: 'box',
 			name: 'Style for Signup'
 		},
 		color2: {
@@ -43,7 +43,7 @@
 			control: { type: 'select' },
 			options: ['box', 'ghost', 'extra-rounded', 'rounded'],
 			description: 'This defines how the button will look in shape',
-			defaultValue: 'normal',
+			defaultValue: 'box',
 			name: 'Style For Login'
 		},
 		color: {

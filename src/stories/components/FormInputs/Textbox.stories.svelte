@@ -11,7 +11,7 @@
 	argTypes={{
 		type: {
 			control: { type: 'select' },
-			options: ['text', 'password', 'number', 'search'],
+			options: ['text', 'password', 'tel', 'number', 'search'],
 			defaultValue: 'text',
 			name: 'Textbox Type'
 		},
@@ -86,6 +86,14 @@
 />
 
 <Story
+	name="Number (only for mobile)"
+	args={{
+		type: 'tel',
+		label: 'this is a number box'
+	}}
+/>
+
+<Story
 	name="Number"
 	args={{
 		type: 'number',
@@ -97,6 +105,6 @@
 	name="Search"
 	args={{
 		type: 'search',
-		label: 'this is a search box'
+		label: 'this is a Search box'
 	}}
 />
