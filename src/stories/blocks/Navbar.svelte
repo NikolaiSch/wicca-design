@@ -1,7 +1,9 @@
 <script>
+	// @ts-nocheck
+
 	import '../css/app.css';
-	import Button from '../components/Buttons/Button.svelte';
-	import Logo from '../components/Utils/Logo.svelte';
+	import Button from '../components/buttons/Button.svelte';
+	import Logo from '../components/utils/Logo.svelte';
 
 	export let size = 'medium';
 	export let height = '60px';
